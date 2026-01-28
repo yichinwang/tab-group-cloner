@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Group Receiver</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tab Group Receiver</h1>
+        <p class="subtitle">Import tabs from Chrome</p>
+
+        <button id="fetch-btn" class="primary-button">
+            Import from Chrome
+        </button>
+
+        <div id="status" class="status"></div>
+
+        <div class="divider">
+            <span>or paste JSON</span>
+        </div>
+
+        <textarea id="json-input" placeholder="Paste tab data JSON here..."></textarea>
+
+        <button id="import-btn" class="secondary-button">
+            Import from JSON
+        </button>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

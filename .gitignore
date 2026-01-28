@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+venv/
+env/
+.env
+
+# Native host (deprecated)
+native-host/venv/
+native-host/*.log
+
+# macOS
+.DS_Store
+*.swp
+
+# IDE
+.idea/
+.vscode/
+*.sublime-*
+
+# Logs
+*.log

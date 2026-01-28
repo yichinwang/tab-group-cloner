@@ -1,0 +1,9 @@
+{
+  "name": "com.tabcloner.host",
+  "description": "Tab Group Cloner Native Messaging Host",
+  "path": "/PATH/TO/tab_cloner_host.py",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://YOUR_EXTENSION_ID_HERE/"
+  ]
+}

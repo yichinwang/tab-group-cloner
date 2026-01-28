@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Group Cloner</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Tab Group Cloner</h1>
+            <p class="subtitle">Clone Chrome tabs to Sidekick</p>
+        </div>
+
+        <div id="info-section" class="info-section">
+            <div class="stat">
+                <span class="stat-label">Tab Groups:</span>
+                <span id="group-count" class="stat-value">-</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Total Tabs:</span>
+                <span id="tab-count" class="stat-value">-</span>
+            </div>
+        </div>
+
+        <button id="clone-btn" class="clone-button">
+            <span class="button-icon">🚀</span>
+            Clone to Sidekick
+        </button>
+
+        <div id="status-section" class="status-section hidden">
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Cloning tab groups...</p>
+            </div>
+
+            <div id="success" class="message success hidden">
+                <span class="icon">✓</span>
+                <p id="success-message"></p>
+            </div>
+
+            <div id="error" class="message error hidden">
+                <span class="icon">✗</span>
+                <p id="error-message"></p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <a href="#" id="help-link">Setup Help</a>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
