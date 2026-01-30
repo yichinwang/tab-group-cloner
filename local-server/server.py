@@ -109,7 +109,7 @@ class TabClonerHandler(BaseHTTPRequestHandler):
 
 
 def main():
-    port = 8765
+    port = 8768
     server = HTTPServer(('127.0.0.1', port), TabClonerHandler)
     print(f"Tab Group Cloner server running on http://127.0.0.1:{port}")
     print("Keep this terminal open while using the extension")

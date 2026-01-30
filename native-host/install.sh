@@ -98,7 +98,7 @@ echo "3. Edit the manifest file and replace EXTENSION_ID_PLACEHOLDER with your a
 echo "   $MANIFEST_FILE"
 echo ""
 echo "4. Install Sidekick browser from https://www.meetsidekick.com/"
-echo "5. Install ChromeDriver: brew install chromedriver (macOS) or download from https://chromedriver.chromium.org/"
+echo "5. Install Playwright browsers: $VENV_DIR/bin/python3 -m playwright install chromium"
 echo ""
 echo "Logs will be written to: $HOME/tab_cloner_host.log"
 echo ""

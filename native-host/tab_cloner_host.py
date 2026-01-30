@@ -43,16 +43,30 @@ def send_message(message):
     sys.stdout.buffer.flush()
     logging.info(f"Sent message: {message}")
 
+def _read_exact(stream, size):
+    """Read exactly size bytes from stream or return None on EOF."""
+    chunks = []
+    remaining = size
+    while remaining > 0:
+        chunk = stream.read(remaining)
+        if not chunk:
+            return None
+        chunks.append(chunk)
+        remaining -= len(chunk)
+    return b''.join(chunks)
 
 def read_message():
     """Read a message from Chrome extension via stdin."""
     # Read the message length (first 4 bytes)
-    text_length_bytes = sys.stdin.buffer.read(4)
-    if len(text_length_bytes) == 0:
+    text_length_bytes = _read_exact(sys.stdin.buffer, 4)
+    if not text_length_bytes:
         return None
 
-    text_length = struct.unpack('i', text_length_bytes)[0]
-    text = sys.stdin.buffer.read(text_length).decode('utf-8')
+    text_length = struct.unpack('I', text_length_bytes)[0]
+    text_bytes = _read_exact(sys.stdin.buffer, text_length)
+    if text_bytes is None:
+        return None
+    text = text_bytes.decode('utf-8')
     message = json.loads(text)
     logging.info(f"Received message: {message}")
     return message

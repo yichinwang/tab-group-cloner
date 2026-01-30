@@ -5,11 +5,10 @@
   "description": "Clone all tab groups from Chrome to Sidekick browser with one click",
   "permissions": [
     "tabs",
-    "tabGroups",
-    "nativeMessaging"
+    "tabGroups"
   ],
   "host_permissions": [
-    "<all_urls>"
+    "http://127.0.0.1:8767/*"
   ],
   "action": {
     "default_popup": "popup.html",

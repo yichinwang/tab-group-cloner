@@ -1,7 +1,7 @@
 // Background service worker for Tab Group Receiver (Sidekick Extension)
 // Uses chrome.tabs.group() API to create real tab groups
 
-const SERVER_URL = 'http://127.0.0.1:8765';
+const SERVER_URL = 'http://127.0.0.1:8768';
 
 // Listen for messages from popup
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
